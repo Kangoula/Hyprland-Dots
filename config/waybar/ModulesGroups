@@ -40,10 +40,10 @@
 		"transition-left-to-right": true
         },
 	"modules": [
+		"memory",
 		"temperature",		
 		"cpu",
 		"power-profiles-daemon",	
-		"memory",
 		"disk",
 	]
 },
@@ -69,14 +69,14 @@
 
 "group/connections": {
 	"orientation": "inherit",
-	"drawer": {
-		"transition-duration": 500,
-		"children-class": "bluetooth",
-		"transition-left-to-right": true
-        },
+	// "drawer": {
+	// 	"transition-duration": 500,
+	// 	"children-class": "bluetooth",
+	// 	"transition-left-to-right": true
+    //     },
 	"modules": [
-		"network",
-		"bluetooth",
+		"network"
+		// "bluetooth",
 	]
 },
 

@@ -24,8 +24,8 @@ max_width=1200
 max_height=1000
 
 # Set percentage of screen size for dynamic adjustment
-percentage_width=90
-percentage_height=100
+percentage_width=70
+percentage_height=70
 
 # Calculate dynamic width and height
 dynamic_width=$((width * percentage_width / 100))
@@ -46,17 +46,16 @@ GDK_BACKEND=$BACKEND yad --width=$dynamic_width --height=$dynamic_height \
     --column=Command: \
     --timeout-indicator=bottom \
 "ESC" "close this app" "" "=" "SUPER KEY (Windows Key)" "(SUPER KEY)" \
-" SHIFT K" "Searchable Keybinds" "(Search all Keybinds via rofi)" \
-"" "" "" \
 " enter" "Terminal" "(kitty)" \
-" SHIFT enter" "DropDown Terminal" "(Not available in Debian and Ubuntu)" \
+" SHIFT enter" "DropDown Terminal" "(kitty-pyprland)" \
+" SHIFT K" "Searchable Keybinds" "(Keybinds)" \
 " A" "Desktop Overview" "(AGS Overview)" \
 " D" "Application Launcher" "(rofi-wayland)" \
 " T" "Open File Manager" "(Thunar)" \
 " S" "Google Search using rofi" "(rofi)" \
 " Q" "close active window" "(not kill)" \
 " Shift Q " "kills an active window" "(kill)" \
-" Z" "Desktop Zoom" "(Not available in Debian and Ubuntu)" \
+" Z" "Desktop Zoom" "(pyprland)" \
 " Alt V" "Clipboard Manager" "(cliphist)" \
 " W" "Choose wallpaper" "(Wallpaper Menu)" \
 " Shift W" "Choose wallpaper effects" "(imagemagick + swww)" \
@@ -81,7 +80,6 @@ GDK_BACKEND=$BACKEND yad --width=$dynamic_width --height=$dynamic_height \
 " Shift F" "Toggle float" "single window" \
 " ALT F" "Toggle all windows to float" "all windows" \
 " Shift B" "Toggle Blur" "normal or less blur" \
-" Shift A" "Animations Menu" "Choose Animations via rofi" \
 " SHIFT G" "Gamemode! All animations OFF or ON" "toggle" \
 " ALT E" "Rofi Emoticons" "Emoticon" \
 " ALT V" "Clipboard Manager" "cliphist" \

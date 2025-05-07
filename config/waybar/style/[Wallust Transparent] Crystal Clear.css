@@ -60,7 +60,6 @@ tooltip {
 	border-style: solid;
 }
 
-#taskbar button,
 #workspaces button {
 	color: @text-alt;
    	box-shadow: none;
@@ -133,7 +132,6 @@ tooltip {
 #custom-hint,
 #custom-hypridle,
 #custom-menu,
-#custom-playerctl,
 #custom-power_vertical,
 #custom-power,
 #custom-settings,
@@ -183,7 +181,6 @@ tooltip {
 	animation-direction: alternate;
 }
 
-#backlight-slider slider,
 #pulseaudio-slider slider {
 	min-width: 0px;
 	min-height: 0px;
@@ -193,7 +190,6 @@ tooltip {
 	box-shadow: none;
 }
 
-#backlight-slider trough,
 #pulseaudio-slider trough {
 	min-width: 80px;  
 	min-height: 10px; 
@@ -201,9 +197,30 @@ tooltip {
 	background-color: black;
 }
 
-#backlight-slider highlight,
 #pulseaudio-slider highlight {
 	min-height: 10px; 
+	border-radius: 5px;
+	background-color: wheat;
+}
+
+#backlight-slider slider {
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+
+#backlight-slider trough {
+	min-width: 80px;  
+	min-height: 10px;
+	border-radius: 5px;
+	background-color: black;
+}
+
+#backlight-slider highlight {
+	min-width: 10px; 
 	border-radius: 5px;
 	background-color: wheat;
 }

@@ -5,10 +5,10 @@
 @define-color white      	#F2F2F2;
 @define-color black      	#000000;
 @define-color text       	#FFFFFF;
-@define-color lightgray  	#686868;
+@define-color lightgray  	#999999;
 @define-color darkgray   	#353535;
 
-@define-color transparent	rgba(1, 1, 1, 0.5);
+@define-color transparent	rgba(1, 1, 1, 0.2);
 @define-color teal-trans	rgba(1, 117, 84, 0.5);
 @define-color cyan			rgba(53, 140, 169, 1);
 
@@ -39,6 +39,13 @@ window#waybar.hidden {
     opacity: 0;
 }
 
+window#waybar.empty,
+window#waybar.empty #window {
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+}
+
 tooltip {
     background: #1e1e2e;
     border-radius: 12px;
@@ -49,12 +56,30 @@ tooltip {
 }
 
 /*-----module groups----*/
-.modules-left,
-.modules-center,
 .modules-right {
     background-color: @background-module;
     border-radius:15px;
-    border-bottom:2px solid @border-color;
+    /* border-bottom:2px solid @border-color; */
+	padding-top: 2px;
+	padding-bottom: 0px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+
+.modules-center {
+    background-color: @background-module;
+    border-radius:15px;
+    /* border-bottom:2px solid @border-color; */
+	padding-top: 2px;
+	padding-bottom: 0px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+
+.modules-left {
+    background-color: @background-module;
+    border-radius:15px;
+    /* border-bottom: 2px solid @border-color; */
 	padding-top: 2px;
 	padding-bottom: 0px;
 	padding-right: 4px;
@@ -62,28 +87,26 @@ tooltip {
 }
 
 #workspaces {
-    padding: 0px 1px;
+    padding: 0px 2px;
     border-radius: 15px;
-    border:2px solid @border-color;
+    border:0px solid @border-color;
     font-weight: bold;
     font-style: normal;
     opacity:0.8;
     color:#FFFFFF;
-}
-
-#taskbar button,   
+}   
 #workspaces button {
-    color: #6E6A86;
+    color: @color15;
     box-shadow: none;
 	text-shadow: none;
     border-radius: 30px;
     padding-left: 4px;
     padding-right: 4px;
+    margin-bottom: 2px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
-#taskbar button.active,
 #workspaces button.active {
     color: #ffd700;
     border-radius: 50%;
@@ -95,6 +118,11 @@ tooltip {
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
+#workspaces button.active:hover {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 #workspaces button.focused {
     color: #d8dee9;
 }
@@ -104,14 +132,17 @@ tooltip {
     border-radius: 10px;
 }
 
-#taskbar button:hover,
 #workspaces button:hover {
     color: #ffd700;
     border-radius: 10px;
- 	padding-left: 2px;
-    padding-right: 2px;
+ 	padding-left: 4px;
+    padding-right: 4px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#clock#2 {
+    color: #efe8f7;
 }
 
 #backlight,
@@ -148,7 +179,6 @@ tooltip {
 #custom-hint,
 #custom-hypridle,
 #custom-menu,
-#custom-playerctl,
 #custom-power_vertical,
 #custom-power,
 #custom-settings,
@@ -172,6 +202,22 @@ tooltip {
 	padding-left: 6px;;
 }
 
+#custom-cava_mviz {
+    animation: rainbow-text 5s linear infinite;
+}
+
+#mpris {
+    animation: rainbow-text 5s linear infinite;
+    font-size: 10px;
+    margin-right: 8px;
+}
+
+@keyframes rainbow-text {
+    0% { color: rgb(34, 193, 195); }       /* Low amplitude */
+    71% { color: rgba(253,187,45,1); }    /* Maximum amplitude */
+    100% { color: rgb(34, 193, 195); }
+}
+
 #temperature.critical {
     background-color: #ff0000;
 }
@@ -182,7 +228,21 @@ tooltip {
     }
 }
 
-#backlight-slider slider,
+#taskbar button.active {
+    background-color: rgb(47, 46, 46);
+    padding-left: 12px;
+    padding-right: 12px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button:hover {
+    padding-left: 3px;
+    padding-right: 3px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
 #pulseaudio-slider slider {
     min-width: 0px;
     min-height: 0px;
@@ -192,7 +252,6 @@ tooltip {
     box-shadow: none;
 }
 
-#backlight-slider trough,
 #pulseaudio-slider trough {
     min-width: 80px;
     min-height: 5px;
@@ -200,16 +259,42 @@ tooltip {
     background-color: #22252a;
 }
 
-#backlight-slider highlight,
 #pulseaudio-slider highlight {
     min-height: 10px;
     border-radius: 5px;
     background-color: #ba5663;
 }
 
+#backlight-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#backlight-slider trough {
+    min-width: 80px;
+    min-height: 10px;
+    border-radius: 5px;
+    background-color: #22252a;
+}
+
+#backlight-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: #ba5663;
+}
 #pulseaudio-slider,
 #pulseaudio {
-	color: @color13;
+	color: @color15;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#pulseaudio-slider:hover,
+#pulseaudio:hover {
+	color: @white;
 }
 
 #pulseaudio.muted {
@@ -217,7 +302,7 @@ tooltip {
 }
 
 #memory {
-	color: @sapphire;
+	color: @color15;
 }
 
 #cpu {
@@ -245,10 +330,49 @@ tooltip {
 	animation-direction: alternate;
 }
 
+#pulseaudio-slider slider {
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+	min-width: 80px;
+	min-height: 5px;
+	border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+	min-height: 10px;
+	border-radius: 5px;
+}
+#backlight-slider slider {
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+
+#backlight-slider trough {
+	min-width: 80px;
+	min-height: 10px;
+	border-radius: 5px;
+}
+
+#backlight-slider highlight {
+	min-width: 10px;
+	border-radius: 5px;
+}
+
 #custom-hypridle,
 #custom-lock,
 #idle_inhibitor {
-    color: @teal;
+    color: @lightgray;
 }
 
 /*-----Indicators----*/
@@ -257,18 +381,20 @@ tooltip {
 	color: #39FF14;
 }
 
-
-#clock#2 {
-    color: #efe8f7;
-}
-
 #clock {
-	color: @sapphire;
+	color: @color15;
     border-radius: 15px;
-    border:2px solid @border-color;
+    border:0px solid @border-color;
+    padding: 0px 4px;
+    margin-left: 4px;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+#clock:hover {
+	color: @white;
 }
 #custom-updates {
     color: @yellow;
 }
 #swaync{
-    color: #ffd700;}
+    color: #ffd700;
+}

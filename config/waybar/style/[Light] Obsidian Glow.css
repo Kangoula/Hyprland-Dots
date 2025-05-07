@@ -19,6 +19,14 @@ window#waybar.hidden {
 	opacity: 0.7;
 }
 
+window#waybar.empty,
+window#waybar.empty #window {
+	padding: 0px;
+	border: 0px;
+	/*  background-color: rgba(66,66,66,0.5); */ /* transparent */
+	background-color: transparent;
+}
+
 tooltip {
 	background: white;
 	border-radius: 10px;
@@ -30,7 +38,6 @@ tooltip label {
 	padding-left: 2px;
 }
 
-#taskbar button,
 #workspaces button {
 	color: #585b70;
     box-shadow: none;
@@ -105,7 +112,6 @@ tooltip label {
 #custom-hint,
 #custom-hypridle,
 #custom-menu,
-#custom-playerctl,
 #custom-power_vertical,
 #custom-power,
 #custom-settings,
@@ -173,7 +179,6 @@ tooltip label {
 	animation-direction: alternate;
 }
 
-#backlight-slider slider,
 #pulseaudio-slider slider {
 	min-width: 0px;
 	min-height: 0px;
@@ -182,18 +187,38 @@ tooltip label {
 	border: none;
 	box-shadow: none;
 }
-
-#backlight-slider trough,
+	
 #pulseaudio-slider trough {
 	min-width: 80px;  
 	min-height: 5px; 
 	border-radius: 5px;
 	background-color: grey;
 }
-
-#backlight-slider highlight,
+	
 #pulseaudio-slider highlight {
 	min-height: 10px; 
+	border-radius: 5px;
+	background-color: #ba5663;
+}
+
+#backlight-slider slider {
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+	
+#backlight-slider trough {
+	min-width: 80px;  
+	min-height: 10px; 
+	border-radius: 5px;
+	background-color: grey;
+}
+	
+#backlight-slider highlight {
+	min-width: 10px; 
 	border-radius: 5px;
 	background-color: #ba5663;
 }

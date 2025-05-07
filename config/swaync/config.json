@@ -41,18 +41,18 @@
       "title": {
           "text": "Notifications",
           "clear-all-button": true,
-          "button-text": "Clear"
+          "button-text": ""
       },
       "dnd": {
-          "text": "Do Not Disturb"
+          "text": "Dérange pô"
       },
       "label": {
           "max-lines": 1,
           "text": "Notification"
       },
       "mpris": {
-          "image-size": 10,
-          "image-radius": 0
+          "image-size": 96,
+          "image-radius": 12
       },
       "volume": {
           "label": "󰕾"
