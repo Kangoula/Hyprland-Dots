@@ -29,7 +29,6 @@
       "milliseconds": 300000 // 5min
     }
   },
-  "always_treat_brackets_as_autoclosed": true,
   "preferred_line_length": 110,
   "soft_wrap": "bounded",
   "tabs": {
@@ -56,7 +55,7 @@
   },
   "languages": {
     "PHP": {
-      "language_servers": ["intelephense", "!phpactor", "..."]
+      "language_servers": ["intelephense"]
     },
     "Vue.js": {
       "prettier": {

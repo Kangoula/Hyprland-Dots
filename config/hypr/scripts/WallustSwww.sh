@@ -30,10 +30,10 @@ if [ -f "$cache_file" ]; then
 	cp -r "$wallpaper_path" "$HOME/.config/hypr/wallpaper_effects/.wallpaper_current"
 fi
 
-# Check the flag before executing further commands
-if [ "$ln_success" = true ]; then
-    # execute wallust
-	echo 'about to execute wallust'
-    # execute wallust skipping tty and terminal changes
-    wallust run "$wallpaper_path" -s &
-fi
+# # Check the flag before executing further commands
+# if [ "$ln_success" = true ]; then
+#     # execute wallust
+# 	echo 'about to execute wallust'
+#     # execute wallust skipping tty and terminal changes
+#     wallust run "$wallpaper_path" -s &
+# fi
