@@ -1,1 +1,104 @@
-/home/gdenis/.config/waybar/configs/[TOP] Default_v5
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+// ### DEFAULT v5 - Top ### //
+[
+  //
+  // écran principal
+  //
+  {
+    "include": [
+      "$HOME/.config/waybar/Modules",
+      "$HOME/.config/waybar/ModulesWorkspaces",
+      "$HOME/.config/waybar/ModulesCustom",
+      "$HOME/.config/waybar/ModulesGroups"
+    ],
+    "layer": "top",
+    "output": [
+      "DP-2"
+    ],
+    //"mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "position": "top",
+    "spacing": 3,
+    "fixed-center": true,
+    "ipc": true,
+    "margin-top": 3,
+    "margin-left": 8,
+    "margin-right": 8,
+    "modules-left": [
+      // "group/app_drawer",
+      // "custom/separator#dot-line",
+      "group/mobo_drawer",
+      "custom/separator#dot-line",
+      "custom/hint",
+      "idle_inhibitor",
+      // "custom/weather",
+      // "custom/separator#blank",
+      // "custom/cava_mviz",
+      "mpris"
+    ],
+    "modules-center": [
+      "custom/swaync",
+      "custom/separator#dot-line",
+      "hyprland/workspaces#rw",
+      "custom/separator#dot-line"
+    ],
+    "modules-right": [
+      // "network",
+      // "network#speed",
+      // "group/connections",
+      // "custom/separator#line",
+      // "mpris",
+      "clock",
+      "group/audio",
+      "custom/separator#dot-line",
+      "tray",
+      "custom/separator#dot-line",
+      "group/status"
+    ]
+  },
+  //
+  // écran 2
+  //
+  {
+    "include": [
+      "$HOME/.config/waybar/Modules",
+      "$HOME/.config/waybar/ModulesWorkspaces",
+      "$HOME/.config/waybar/ModulesCustom",
+      "$HOME/.config/waybar/ModulesGroups"
+    ],
+    "layer": "top",
+    "output": [
+      "HDMI-A-2"
+    ],
+    //"mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "position": "top",
+    "spacing": 3,
+    "fixed-center": true,
+    "ipc": true,
+    "margin-top": 3,
+    "margin-left": 8,
+    "margin-right": 8,
+    "modules-left": [
+      "custom/updater"
+    ],
+    "modules-center": [
+      "hyprland/workspaces#rw"
+    ],
+    "modules-right": [
+      // "network",
+      // "network#speed",
+      // "group/connections",
+      // "custom/separator#line",
+      // "mpris",
+      "clock",
+      "group/audio",
+      // "custom/separator#dot-line",
+      // "tray",
+      "custom/separator#dot-line",
+      "group/status"
+    ]
+  }
+]
