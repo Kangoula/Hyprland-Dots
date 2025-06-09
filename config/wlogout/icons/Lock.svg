@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 34 34"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="Logout.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.64"
+     inkscape:cx="472.65625"
+     inkscape:cy="420.3125"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <svg
+     width="1024"
+     height="1024"
+     viewBox="0 0 34 34"
+     version="1.1"
+     id="svg1">
+    <path
+       d="M 0.97917269,0.39845586 H 0.7718128 V 0.23256893 a 0.2073598,0.2073598 0 0 0 -0.41471937,0 V 0.39845586 H 0.14973356 a 0.06227921,0.06227921 0 0 0 -0.062208,0.0622075 V 1.0412707 a 0.06227921,0.06227921 0 0 0 0.062208,0.062208 h 0.82943913 a 0.06227921,0.06227921 0 0 0 0.062208,-0.062208 V 0.46066364 a 0.06227921,0.06227921 0 0 0 -0.062208,-0.0622078 z M 0.39856539,0.23256893 a 0.16588784,0.16588784 0 0 1 0.33177542,0 V 0.39845586 H 0.39856539 Z M 0.99990869,1.041272 a 0.02075973,0.02075973 0 0 1 -0.020735,0.020735 H 0.14973431 A 0.02075973,0.02075973 0 0 1 0.12899904,1.041272 V 0.46066364 a 0.02075973,0.02075973 0 0 1 0.0207352,-0.0207359 h 0.82943905 a 0.02075973,0.02075973 0 0 1 0.020735,0.0207359 z M 0.60589464,0.75096756 a 0.04147195,0.04147195 0 1 1 -0.0414719,-0.041472 0.0415195,0.0415195 0 0 1 0.0414719,0.041472 z"
+       id="path1"
+       style="fill:#ffffff;stroke-width:0.00518401" />
+  </svg>
+</svg>
