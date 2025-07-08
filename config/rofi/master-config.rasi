@@ -4,19 +4,18 @@
 /* ---- Configuration ---- */
 
 configuration {
-    font:                       "JetBrainsMono Nerd Font SemiBold 12";
-    modi:                       "drun,run,filebrowser";
+	font:						"General Sans Medium 11";
+	modi:                       "drun,filebrowser";
     show-icons:                 true;
     display-drun:               "Apps";
-    display-run:                "Run";
-    display-filebrowser:        "Files";
-    display-window:             "Windows";
-    drun-display-format:        "{name}";
-    hover-select:               true;
-    me-select-entry:            "MouseSecondary";
+    display-filebrowser:        "Fichiers";
+	 display-window:             "Fenêtres";
+	drun-display-format:        "{name}";
+	window-format:              "{w} · {c} · {t}";
+	hover-select:               true;
+	me-select-entry:            "MouseSecondary";
     me-accept-entry:            "MousePrimary";
-    window-format:              "{w} · {c} · {t}";
-    dpi:						1;
+	dpi:						1;
 }
 
 /* ---- Load wallust colors ---- */
@@ -32,7 +31,7 @@ configuration {
 
     text-selected:               @background;
     text-color:                  @foreground;
-    border-color:                @selected;
+    border-color:                transparent;
 }
 
 /* ---- Window ---- */
@@ -43,36 +42,37 @@ window {
     transparency:               "real";
     cursor:                     "default";
     spacing:                    0px;
-    border:                     3px 0px 3px 0px;
-    border-radius:              30px;
+    border:                     0;
+    border-radius:              5px;
     location:                   center;
     anchor:                     center;
 
     // Style Values
-    width:                      50%;
+    width:                      500px;
     background-color:           @background;
 }
 
 /* ----- Main Box ----- */
 mainbox {
-	padding:					 12px;
+	padding:					 0px;
     enabled:                     true;
-    orientation:                 vertical;
-    children:                    [ "inputbar", "listbox" ];
+    orientation:                 horizontal;
+    children:                    [ "imgbox", "listbox" ];
     background-color:            transparent;
 }
 
 
 /* ---- Inputbar ---- */
-inputbar {
+imgbox {
+    transparency:                "real";
     enabled:                     true;
-    padding:                     10px 10px 50px 10px;
-    margin:                      10px;
+    padding:                     10px;
+    margin:                      2 75px 2 2;
     background-color:            transparent;
-    border-radius:               25px;
-    orientation:                 horizontal;
-    children:                    ["entry", "dummy", "mode-switcher" ];
-    background-image:            url("~/.config/rofi/.current_wallpaper", width);
+    border-radius:               5px 0px 0px 5px;
+    orientation:                 vertical;
+    children:                    ["dummy", "mode-switcher"];
+    background-image:            url("~/.config/rofi/.current_wallpaper", height);
 }
 
 /* ---- Entry input ---- */
@@ -81,11 +81,12 @@ entry {
     expand:                      false;
     width:                       20%;
     padding:                     10px;
-    border-radius:               12px;
-    background-color:            @selected;
-    text-color:                  @text-selected;
+    border-radius:               5px;
+    background-color:            rgba(255,255,255,0.1);
+    transparency: "real";
+    text-color:                  @foreground;
     cursor:                      text;
-    placeholder:                 " 🖥️ Search "; // << Search symbol
+    placeholder:                 ""; // << Search symbol
     placeholder-color:           inherit;
 }
 
@@ -93,15 +94,16 @@ entry {
 listbox {
     spacing:                     10px;
     padding:                     10px;
+    margin:                      0 0 0 -75;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [ "message", "listview" ];
+    children:                    ["entry", "message", "listview" ];
 }
 
 /* ---- Listview ---- */
 listview {
     enabled:                     true;
-    columns:                     2;
+    columns:                     1;
     lines:                       6;
     cycle:                       true;
     dynamic:                     true;
@@ -128,13 +130,13 @@ mode-switcher{
     enabled:                     true;
     spacing:                     10px;
     background-color:            transparent;
+    padding:                     0 30 0 30;
 }
 button {
-    width:                       5%;
     padding:                     12px;
-    border-radius:               12px;
-    background-color:            @text-selected;
-    text-color:                  @text-color;
+    border-radius:               5px;
+    background-color:            rgba(255,255,255,0.3);
+    text-color:                  @background;
     cursor:                      pointer;
 }
 button selected {
@@ -145,7 +147,7 @@ button selected {
 /* ---- Scrollbar ---- */
 scrollbar {
     border:       				0;
-    handle-color: 				@background-alt;
+    handle-color: 				@border-color;
     handle-width: 				2px ;
     padding:      				0;
 }
@@ -154,8 +156,8 @@ scrollbar {
 element {
     enabled:                     true;
     spacing:                     10px;
-  	padding: 					 10px;
-    border-radius:               12px;
+    padding:                     10px;
+    border-radius:               5px;
     background-color:            transparent;
     cursor:                      pointer;
 }
@@ -174,11 +176,11 @@ element normal.active {
 }
 
 element selected.normal {
-    border:                      0px 3px 0px 3px;
-    border-radius:               16px;
+    border:                      0;
+    border-radius:               5px;
     border-color:                @selected;
-    background-color:            transparent;
-    text-color:                  @background-alt;
+    background-color:            rgba(255,255,255,0.1);
+    text-color:                  @selected;
 }
 
 element selected.urgent {
@@ -208,7 +210,7 @@ element-icon {
     cursor:                      inherit;
 }
 element-text {
-    font:						"JetBrainsMono Nerd Font SemiBold 12";
+    font:						"General Sans 10";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;

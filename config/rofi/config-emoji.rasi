@@ -6,11 +6,19 @@
 /* ---- Entry ---- */
 entry {
   width: 37%;
-  placeholder: " 💫 Search Emoji's  **note** 👀 Click or Return to choose | Ctrl V to Paste";
+  placeholder: "Click or Return to choose | Ctrl V to Paste";
+}
+
+listbox {
+  margin: 0;
 }
 
 /* ---- Listview ---- */
 listview {
   columns: 1;
   lines: 8;
+}
+
+imgbox {
+  enabled: false;
 }

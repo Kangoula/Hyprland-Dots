@@ -8,21 +8,25 @@ window {
 	width: 40%;
     y-offset: 6px;
     location: north;
+    border-radius: 5px;
+    background-color: transparent;
 }
 
 /* ---- Inputbar ---- */
 inputbar {
     enabled: true;
+    orientation: vertical;
 }
 
 /* ---- Mainbox ---- */
 mainbox {
 	padding: 0px;
-    children: [ "entry"];
+    children: ["entry"];
 }
 
 /* ---- Entry ---- */ 
 entry {
-	placeholder: " 🔎 Google Search via web browser";
+	placeholder: "Chercher sur CanardCanardAllez";
+    width: 100%;
 }
 
